@@ -16,9 +16,7 @@ var HelloWorldLayer = cc.Layer.extend({
         var closeItem = new cc.MenuItemImage(
             res.CloseNormal_png,
             res.CloseSelected_png,
-            function () {
-                cc.log("Menu is clicked!");
-            }, this);
+            this.onPlay, this);
         closeItem.attr({
             x: size.width - 20,
             y: 20,
@@ -64,8 +62,12 @@ var HelloWorldLayer = cc.Layer.extend({
                 cc.tintTo(2.5,255,125,0)
             )
         );
-        return true;
+    },
+
+    onPlay:function(){
+      cc.director.runScene(new MinionScene());
     }
+
 });
 
 var HelloWorldScene = cc.Scene.extend({
@@ -75,4 +77,6 @@ var HelloWorldScene = cc.Scene.extend({
         this.addChild(layer);
     }
 });
+
+
 
