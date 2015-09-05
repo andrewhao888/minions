@@ -13,8 +13,8 @@
     "jsList" : [
         "src/resource.js",
         "src/app.js",
-        src/MinionBox.js,
-        src/MinionScene.js,
-        src/BackgroundLayer.js
+        "src/MinionBox.js",
+        "src/MinionScene.js",
+        "src/BackgroundLayer.js"
     ]
 }
