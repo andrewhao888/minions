@@ -35,6 +35,8 @@ var MinionBox = cc.Sprite.extend({
     },
 
     getCost:function(){
-      return this.editBox.getString();
+      var num = Number(this.editBox.getString());
+      if(isNaN(num)) return 0;
+      else  return num;
     }
 })
