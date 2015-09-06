@@ -22,7 +22,7 @@ var MinionBox = cc.Sprite.extend({
       this.addChild(logoBG);
 
       this.editBox = cc.EditBox.create(
-          new cc.Size(50,25),
+          new cc.size(50,25),
           new cc.Scale9Sprite(this.editBgPath)  //disabled state image
       );
       this.editBox.setPosition(0, 0);

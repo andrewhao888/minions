@@ -12,7 +12,7 @@ var BackgroundLayer = cc.Layer.extend({
     var hightcenter = winsize.height / 2;
     var centerPos = cc.p(widthcenter, hightcenter);
     
-    var spriteBG = new cc.Sprite(res.HelloWorld_png);
+    var spriteBG = new cc.Sprite(res.FWBackground);
     spriteBG.setPosition(centerPos);
     this.addChild(spriteBG);
   

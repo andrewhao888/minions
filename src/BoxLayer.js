@@ -14,8 +14,8 @@ var BoxLayer = cc.Layer.extend({
 		editBox = [];
 		for(var i = 0; i < 3; i++){
 			editBox[i] = new MinionBox(
-					res.start_n_png,
-					res.start_s_png,
+					res.EditBoxBanana,
+					res.EditBoxBanana,
 					"edit",
 					i * 10
 			);
@@ -24,8 +24,8 @@ var BoxLayer = cc.Layer.extend({
 		};
 
 		var sumUp = new cc.MenuItemSprite(
-				new cc.Sprite(res.start_n_png),
-				new cc.Sprite(res.start_s_png),
+				new cc.Sprite(res.BTGoNormal),
+				new cc.Sprite(res.BTGoSelected),
 				this.onSum,
 				this
 		);

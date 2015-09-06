@@ -14,12 +14,12 @@ var HelloWorldLayer = cc.Layer.extend({
 
         // add a "close" icon to exit the progress. it's an autorelease object
         var closeItem = new cc.MenuItemImage(
-            res.CloseNormal_png,
-            res.CloseSelected_png,
+        	res.BTPlayNormal,
+        	res.BTPlaySelected,
             this.onPlay, this);
         closeItem.attr({
-            x: size.width - 20,
-            y: 20,
+            x: size.width / 2,
+            y: size.height / 2,
             anchorX: 0.5,
             anchorY: 0.5
         });
@@ -41,7 +41,7 @@ var HelloWorldLayer = cc.Layer.extend({
         this.addChild(helloLabel, 5);
 
         // add "HelloWorld" splash screen"
-        this.sprite = new cc.Sprite(res.HelloWorld_png);
+        this.sprite = new cc.Sprite(res.FWBackground);
         this.sprite.attr({
             x: size.width / 2,
             y: size.height / 2,
