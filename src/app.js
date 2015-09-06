@@ -52,13 +52,13 @@ var HelloWorldLayer = cc.Layer.extend({
 
         this.sprite.runAction(
             cc.sequence(
-                cc.rotateTo(2, 0),
-                cc.scaleTo(2, 1, 1)
+                cc.rotateTo(0.5, 0),
+                cc.scaleTo(0.5, 1, 1)
             )
         );
         helloLabel.runAction(
             cc.spawn(
-                cc.moveBy(2.5, cc.p(0, size.height - 40)),
+                cc.moveBy(1, cc.p(0, size.height - 40)),
                 cc.tintTo(2.5,255,125,0)
             )
         );
