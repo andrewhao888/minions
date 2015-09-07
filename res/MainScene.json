@@ -1,0 +1,731 @@
+{
+  "ID": "a2ee0952-26b5-49ae-8bf9-4f1d6279b798",
+  "Version": "2.3.2.0",
+  "Name": "MainScene",
+  "Content": {
+    "Content": {
+      "Animation": {
+        "Duration": 0,
+        "Speed": 1.0,
+        "Timelines": [],
+        "ctype": "TimelineActionData"
+      },
+      "AnimationList": [],
+      "ObjectData": {
+        "Children": [
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "minious_bg.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 320.0,
+              "Y": 655.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.5,
+              "Y": 0.5766
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "TopMargin": -87.0,
+            "BottomMargin": 87.0,
+            "Tag": 5,
+            "Children": [
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "Node.json",
+                  "Plist": ""
+                },
+                "InnerActionSpeed": 1.0,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 315.9974,
+                  "Y": 582.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PrePosition": {
+                  "X": 0.4937,
+                  "Y": 0.5123
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 315.9974,
+                "RightMargin": 324.0026,
+                "TopMargin": 554.0,
+                "BottomMargin": 582.0,
+                "Tag": 97,
+                "ActionTag": 782935584,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "ProjectNode_2",
+                "ctype": "ProjectNodeObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "Node.json",
+                  "Plist": ""
+                },
+                "InnerActionSpeed": 1.0,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 121.4998,
+                  "Y": 582.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PrePosition": {
+                  "X": 0.1898,
+                  "Y": 0.5123
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 121.4998,
+                "RightMargin": 518.5002,
+                "TopMargin": 554.0,
+                "BottomMargin": 582.0,
+                "Tag": 634,
+                "ActionTag": 1608104289,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "ProjectNode_2_0",
+                "ctype": "ProjectNodeObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "Node.json",
+                  "Plist": ""
+                },
+                "InnerActionSpeed": 1.0,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 518.4978,
+                  "Y": 582.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PrePosition": {
+                  "X": 0.8102,
+                  "Y": 0.5123
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 518.4978,
+                "RightMargin": 121.5022,
+                "TopMargin": 554.0,
+                "BottomMargin": 582.0,
+                "Tag": 650,
+                "ActionTag": -1336905994,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "ProjectNode_2_1",
+                "ctype": "ProjectNodeObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "Node.json",
+                  "Plist": ""
+                },
+                "InnerActionSpeed": 1.0,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 121.4998,
+                  "Y": 340.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PrePosition": {
+                  "X": 0.1898,
+                  "Y": 0.2993
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 121.4998,
+                "RightMargin": 518.5002,
+                "TopMargin": 796.0,
+                "BottomMargin": 340.0,
+                "Tag": 666,
+                "ActionTag": 1419154137,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "ProjectNode_2_2",
+                "ctype": "ProjectNodeObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "Node.json",
+                  "Plist": ""
+                },
+                "InnerActionSpeed": 1.0,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 315.9974,
+                  "Y": 336.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PrePosition": {
+                  "X": 0.4937,
+                  "Y": 0.2958
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 315.9974,
+                "RightMargin": 324.0026,
+                "TopMargin": 800.0,
+                "BottomMargin": 336.0,
+                "Tag": 682,
+                "ActionTag": 682886935,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "ProjectNode_2_3",
+                "ctype": "ProjectNodeObjectData"
+              },
+              {
+                "FileData": {
+                  "Type": "Normal",
+                  "Path": "Node.json",
+                  "Plist": ""
+                },
+                "InnerActionSpeed": 1.0,
+                "AnchorPoint": {},
+                "Position": {
+                  "X": 518.4978,
+                  "Y": 334.0
+                },
+                "Scale": {
+                  "ScaleX": 1.0,
+                  "ScaleY": 1.0
+                },
+                "CColor": {},
+                "IconVisible": true,
+                "PrePosition": {
+                  "X": 0.8102,
+                  "Y": 0.294
+                },
+                "PreSize": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "LeftMargin": 518.4978,
+                "RightMargin": 121.5022,
+                "TopMargin": 802.0,
+                "BottomMargin": 334.0,
+                "Tag": 698,
+                "ActionTag": -1200574203,
+                "Size": {
+                  "X": 0.0,
+                  "Y": 0.0
+                },
+                "Name": "ProjectNode_2_4",
+                "ctype": "ProjectNodeObjectData"
+              }
+            ],
+            "ActionTag": -620272433,
+            "Size": {
+              "X": 640.0,
+              "Y": 1136.0
+            },
+            "Name": "Default",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Jorge_0.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 121.4998,
+              "Y": 915.9895
+            },
+            "Scale": {
+              "ScaleX": 0.8545,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.1898,
+              "Y": 0.8063
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 11.4998,
+            "RightMargin": 408.5002,
+            "TopMargin": 110.0105,
+            "BottomMargin": 805.9895,
+            "Tag": 9,
+            "ActionTag": -1644077402,
+            "Size": {
+              "X": 220.0,
+              "Y": 220.0
+            },
+            "Name": "adv_img_1",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Jorge_0.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 315.9974,
+              "Y": 915.9895
+            },
+            "Scale": {
+              "ScaleX": 0.8545,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4937,
+              "Y": 0.8063
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 205.9974,
+            "RightMargin": 214.0026,
+            "TopMargin": 110.0105,
+            "BottomMargin": 805.9895,
+            "Tag": 10,
+            "ActionTag": 588423889,
+            "Size": {
+              "X": 220.0,
+              "Y": 220.0
+            },
+            "Name": "adv_img_2",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FileData": {
+              "Type": "Normal",
+              "Path": "Jorge_0.png",
+              "Plist": ""
+            },
+            "BlendFunc": {
+              "Src": 1,
+              "Dst": 771
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 518.4978,
+              "Y": 915.9902
+            },
+            "Scale": {
+              "ScaleX": 0.8545,
+              "ScaleY": 1.0
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.8102,
+              "Y": 0.8063
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 408.4978,
+            "RightMargin": 11.5022,
+            "TopMargin": 110.0098,
+            "BottomMargin": 805.9902,
+            "Tag": 11,
+            "ActionTag": -1870473353,
+            "Size": {
+              "X": 220.0,
+              "Y": 220.0
+            },
+            "Name": "adv_img_2",
+            "ctype": "SpriteObjectData"
+          },
+          {
+            "FontSize": 20,
+            "LabelText": "Advertiser 1",
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 121.4998,
+              "Y": 1023.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 178,
+              "G": 60,
+              "B": 66
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.1898,
+              "Y": 0.9005
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 68.4998,
+            "RightMargin": 465.5002,
+            "TopMargin": 101.5,
+            "BottomMargin": 1011.5,
+            "Tag": 15,
+            "ActionTag": 475895312,
+            "Size": {
+              "X": 106.0,
+              "Y": 23.0
+            },
+            "Name": "Text_3",
+            "ctype": "TextObjectData"
+          },
+          {
+            "FontSize": 20,
+            "LabelText": "Advertiser 2",
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 315.9974,
+              "Y": 1023.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 230,
+              "G": 90,
+              "B": 52
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4937,
+              "Y": 0.9005
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 262.9974,
+            "RightMargin": 271.0026,
+            "TopMargin": 101.5,
+            "BottomMargin": 1011.5,
+            "Tag": 16,
+            "ActionTag": 1961534133,
+            "Size": {
+              "X": 106.0,
+              "Y": 23.0
+            },
+            "Name": "Text_3_0",
+            "ctype": "TextObjectData"
+          },
+          {
+            "FontSize": 20,
+            "LabelText": "Advertiser 3",
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 518.4978,
+              "Y": 1023.0
+            },
+            "Scale": {
+              "ScaleX": 1.0,
+              "ScaleY": 1.0
+            },
+            "CColor": {
+              "R": 139,
+              "G": 73,
+              "B": 139
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.8102,
+              "Y": 0.9005
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 465.4978,
+            "RightMargin": 68.5022,
+            "TopMargin": 101.5,
+            "BottomMargin": 1011.5,
+            "Tag": 17,
+            "ActionTag": -1617739784,
+            "Size": {
+              "X": 106.0,
+              "Y": 23.0
+            },
+            "Name": "Text_3_0_0",
+            "ctype": "TextObjectData"
+          },
+          {
+            "FontSize": 48,
+            "ButtonText": "",
+            "TextColor": {
+              "R": 65,
+              "G": 65,
+              "B": 70
+            },
+            "DisabledFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Disable.png",
+              "Plist": ""
+            },
+            "PressedFileData": {
+              "Type": "Default",
+              "Path": "Default/Button_Press.png",
+              "Plist": ""
+            },
+            "NormalFileData": {
+              "Type": "Normal",
+              "Path": "button_play.png",
+              "Plist": ""
+            },
+            "Scale9Enable": true,
+            "Scale9OriginX": 15,
+            "Scale9OriginY": 11,
+            "Scale9Width": 260,
+            "Scale9Height": 132,
+            "OutlineColor": {
+              "G": 0,
+              "B": 0
+            },
+            "ShadowColor": {
+              "R": 110,
+              "G": 110,
+              "B": 110
+            },
+            "ShadowOffsetX": 2.0,
+            "ShadowOffsetY": -2.0,
+            "TouchEnable": true,
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 315.9974,
+              "Y": 218.0
+            },
+            "Scale": {
+              "ScaleX": 0.6345,
+              "ScaleY": 0.6345
+            },
+            "CColor": {},
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4937,
+              "Y": 0.1919
+            },
+            "PreSize": {
+              "X": 0.4531,
+              "Y": 0.1356
+            },
+            "LeftMargin": 170.9974,
+            "RightMargin": 179.0026,
+            "TopMargin": 841.0001,
+            "BottomMargin": 141.0,
+            "Tag": 714,
+            "ActionTag": 2076920900,
+            "Size": {
+              "X": 290.0,
+              "Y": 154.0
+            },
+            "Name": "Button_1",
+            "ctype": "ButtonObjectData"
+          },
+          {
+            "LabelText": "FreeWheel Minions",
+            "LabelBMFontFile_CNB": {
+              "Type": "Default",
+              "Path": "Default/defaultBMFont.fnt",
+              "Plist": ""
+            },
+            "AnchorPoint": {
+              "ScaleX": 0.5,
+              "ScaleY": 0.5
+            },
+            "Position": {
+              "X": 317.9999,
+              "Y": 1135.4994
+            },
+            "Scale": {
+              "ScaleX": 2.1163,
+              "ScaleY": 2.1163
+            },
+            "CColor": {
+              "G": 219,
+              "B": 0
+            },
+            "IconVisible": false,
+            "PrePosition": {
+              "X": 0.4969,
+              "Y": 0.9996
+            },
+            "PreSize": {
+              "X": 0.0,
+              "Y": 0.0
+            },
+            "LeftMargin": 210.4999,
+            "RightMargin": 214.5001,
+            "TopMargin": -17.4994,
+            "BottomMargin": 1117.4994,
+            "Tag": 715,
+            "ActionTag": -1714575647,
+            "Size": {
+              "X": 215.0,
+              "Y": 36.0
+            },
+            "Name": "BitmapFontLabel_1",
+            "ctype": "TextBMFontObjectData"
+          }
+        ],
+        "Size": {
+          "X": 640.0,
+          "Y": 1136.0
+        },
+        "Name": "Scene",
+        "ctype": "SingleNodeObjectData"
+      },
+      "UsedResources": [
+        "button_play.png",
+        "Default/Button_Disable.png",
+        "Default/Button_Press.png",
+        "Default/defaultBMFont.fnt",
+        "Default/defaultBMFont.png",
+        "Jorge_0.png",
+        "minious_bg.png",
+        "Node.json"
+      ],
+      "ctype": "GameProjectData"
+    }
+  },
+  "Type": "Scene"
+}

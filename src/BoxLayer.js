@@ -24,8 +24,8 @@ var BoxLayer = cc.Layer.extend({
 		};
 
 		var sumUp = new cc.MenuItemSprite(
-				new cc.Sprite(res.start_n_png),
-				new cc.Sprite(res.start_s_png),
+				new cc.Sprite(res.bt_play_normal_png),
+				new cc.Sprite(res.bt_play_press_png),
 				this.onSum,
 				this
 		);
