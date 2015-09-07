@@ -1,6 +1,7 @@
 
 var HelloWorldLayer = cc.Layer.extend({
     sprite:null,
+    MiniBox:null,
     ctor:function () {
         //////////////////////////////
         // 1. super init first
@@ -12,7 +13,7 @@ var HelloWorldLayer = cc.Layer.extend({
         // ask the window size
         var size = cc.winSize;
 
-        // add a "close" icon to exit the progress. it's an autorelease object
+        // // add a "close" icon to exit the progress. it's an autorelease object
         var closeItem = new cc.MenuItemImage(
         	res.BTPlayNormal,
         	res.BTPlaySelected,
@@ -29,16 +30,16 @@ var HelloWorldLayer = cc.Layer.extend({
         menu.y = 0;
         this.addChild(menu, 1);
 
-        /////////////////////////////
-        // 3. add your codes below...
-        // add a label shows "Hello World"
-        // create and initialize a label
-        var helloLabel = new cc.LabelTTF("Hello World", "Arial", 38);
-        // position the label on the center of the screen
-        helloLabel.x = size.width / 2;
-        helloLabel.y = 0;
-        // add the label as a child to this layer
-        this.addChild(helloLabel, 5);
+        // /////////////////////////////
+        // // 3. add your codes below...
+        // // add a label shows "Hello World"
+        // // create and initialize a label
+        // var helloLabel = new cc.LabelTTF("Hello World", "Arial", 38);
+        // // position the label on the center of the screen
+        // helloLabel.x = size.width / 2;
+        // helloLabel.y = 0;
+        // // add the label as a child to this layer
+        // this.addChild(helloLabel, 5);
 
         // add "HelloWorld" splash screen"
         this.sprite = new cc.Sprite(res.FWBackground);
