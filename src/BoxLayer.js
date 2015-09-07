@@ -14,8 +14,8 @@ var BoxLayer = cc.Layer.extend({
 		editBox = [];
 		for(var i = 0; i < 3; i++){
 			editBox[i] = new MinionBox(
-					res.EditBoxBanana,
-					res.EditBoxBanana,
+					res.EditBoxBg,
+					res.EditBoxFront,
 					"edit",
 					i * 10
 			);
