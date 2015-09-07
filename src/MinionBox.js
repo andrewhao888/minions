@@ -1,13 +1,23 @@
 var MinionBox = cc.Sprite.extend({
-    logoBG:null,
-    editBox:null,
+    Logo:null,
+    InputBox:null,
     discription:'',
     price:0,
-    editBox:null,
-    ctor:function(logoBgPath, textBgPath, text, price) {
+
+    ctor:function(position, logoBgRes, text, price) {
       this._super()
-      this.logoBgPath  = logoBgPath;
-      this.editBgPath  = textBgPath;
+
+      this.Logo = new cc.Sprite(logoBgRes);
+      this.Logo.setPosition(position.x, position.y + 125);
+      this.addChild(this.Logo);
+
+      this.InputBox = cc.EditBox.create(
+          new cc.size(50,25),
+          new cc.Scale9Sprite(res.EditBoxBanana)
+      );
+      this.InputBox.setPosition(position);
+      this.addChild(this.InputBox);
+
       this.discription = text;
       this.price       = price;
 
@@ -16,26 +26,10 @@ var MinionBox = cc.Sprite.extend({
 
     init:function(){
       this._super();
-
-      var logoBG = new cc.Sprite(this.editBgPath);
-      logoBG.setPosition(0, 25);
-      this.addChild(logoBG);
-
-      this.editBox = cc.EditBox.create(
-          new cc.size(50,25),
-          new cc.Scale9Sprite(this.editBgPath)  //disabled state image
-      );
-      this.editBox.setPosition(0, 0);
-      this.addChild(this.editBox);
-    },
-
-    setPosition:function(position) {
-        this._position.x = position.x;
-        this._position.y = position.y;
     },
 
     getCost:function(){
-      var num = Number(this.editBox.getString());
+      var num = Number(this.InputBox.getString());
       if(isNaN(num)) return 0;
       else  return num;
     }

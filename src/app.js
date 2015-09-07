@@ -57,12 +57,13 @@ var HelloWorldLayer = cc.Layer.extend({
                 cc.scaleTo(0.5, 1, 1)
             )
         );
-        helloLabel.runAction(
-            cc.spawn(
-                cc.moveBy(1, cc.p(0, size.height - 40)),
-                cc.tintTo(2.5,255,125,0)
-            )
-        );
+
+        test = new MinionBox(
+            cc.p(100,100),
+            res.BTGoSelected,
+            '1234',123
+            );
+        this.addChild(test);
     },
 
     onPlay:function(){
