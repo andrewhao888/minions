@@ -8,12 +8,16 @@ var MinionBox = cc.Sprite.extend({
       this._super()
 
       this.Logo = new cc.Sprite(logoBgRes);
-      this.Logo.setPosition(position.x, position.y + 125);
+      this.Logo.setPosition(position.x, position.y + 200);
       this.addChild(this.Logo);
 
+      inputBoxBg = new cc.Sprite(res.EditBoxBg);
+      inputBoxBg.setPosition(position);
+      this.addChild(inputBoxBg);
+
       this.InputBox = cc.EditBox.create(
-          new cc.size(50,25),
-          new cc.Scale9Sprite(res.EditBoxBanana)
+          new cc.size(200,60),
+          new cc.Scale9Sprite(res.EditBoxFront)
       );
       this.InputBox.setPosition(position);
       this.addChild(this.InputBox);

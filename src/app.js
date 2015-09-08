@@ -59,8 +59,8 @@ var HelloWorldLayer = cc.Layer.extend({
         );
 
         test = new MinionBox(
-            cc.p(100,100),
-            res.BTGoSelected,
+            cc.p(200,200),
+            res.Inventory1,
             '1234',123
             );
         this.addChild(test);
