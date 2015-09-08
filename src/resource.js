@@ -10,7 +10,8 @@ var res = {
     BTPlaySelected : "res/bt_play_selected.png",
     BTGoNormal : "res/bt_go_normal.png",
     BTGoSelected : "res/bt_go_selected.png",
-    EditBoxBanana : "res/edit_box_banana.png"
+    EditBoxBg : "res/edit_box_bg.png",
+    EditBoxFront : "res/edit_box_front.png"
 };
 
 var g_resources = [];
