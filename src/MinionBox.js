@@ -33,7 +33,6 @@ var MinionBox = cc.Sprite.extend({
       var inputBoxBg = new cc.Sprite(res.EditBoxBg);
       inputBoxBg.setPosition(position.x+31,position.y-85);
       this.addChild(inputBoxBg);
-
       this.InputBox = cc.EditBox.create(
           new cc.size(74,20),
           new cc.Scale9Sprite(res.EditBoxFront)
