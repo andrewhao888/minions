@@ -61,9 +61,12 @@ var HelloWorldLayer = cc.Layer.extend({
         test = new MinionBox(
             cc.p(200,200),
             res.Inventory1,
-            '1234',123
+            1234,123,'ABC'
             );
+        test.setScale(1,1);
         this.addChild(test);
+        test.setHistory(30);
+        test.setWinner('Advertiser 1');
     },
 
     onPlay:function(){
