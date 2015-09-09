@@ -12,6 +12,7 @@ var res = {
     BTGoSelected : "res/bt_go_selected.png",
     EditBoxBg : "res/edit_box_bg.png",
     EditBoxFront : "res/edit_box_front.png",
+    IconBanana : "res/icon_banana.png",
 
     Inventory1: "res/Inventory/inventory_1.png"
 };

@@ -61,7 +61,7 @@ var HelloWorldLayer = cc.Layer.extend({
         test = new MinionBox(
             cc.p(200,200),
             res.Inventory1,
-            1234,123,'ABC'
+            1234,'3-body'
             );
         test.setScale(1,1);
         this.addChild(test);

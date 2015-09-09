@@ -3,19 +3,20 @@ var MinionBox = cc.Sprite.extend({
     InputBox:null,
     _position:null,
     _fontType:"Arial",
-    _fontSize:18,
+    _fontSize:20,
 
     // Params:
     //   position:  cc.p(100,100)
     //   logoBgRes: res.logo_png
     //   cost:      123.45
-    ctor:function(position, logoBgRes, cost, history, winner) {
+    //   name:      '3-body'
+    ctor:function(position, logoBgRes, cost, name) {
       this._super();
 
       this._position = position;
       this.renderInventory(logoBgRes);
       this.renderEditBox();
-      this.renderLabels(cost);
+      this.renderLabels(cost, name);
 
       this.init();
     },
@@ -30,35 +31,40 @@ var MinionBox = cc.Sprite.extend({
     renderEditBox:function(){
       var position = this._position;
       var inputBoxBg = new cc.Sprite(res.EditBoxBg);
-      inputBoxBg.setPosition(position.x+25,position.y-100);
+      inputBoxBg.setPosition(position.x+31,position.y-85);
       this.addChild(inputBoxBg);
 
       this.InputBox = cc.EditBox.create(
-          new cc.size(200,60),
+          new cc.size(74,20),
           new cc.Scale9Sprite(res.EditBoxFront)
       );
-      this.InputBox.setFontSize(28)
-      this.InputBox.setPosition(position.x+25,position.y-100);
+      this.InputBox.setFontSize(14)
+      this.InputBox.setPosition(position.x+20,position.y-85);
       this.addChild(this.InputBox);
     },
 
-    renderLabels:function(cost){
+    renderLabels:function(cost, name){
       var position = this._position;
-      var labelValue = new cc.LabelTTF("Value:", this._fontType, this._fontSize);
-      labelValue.setPosition(position.x-50,position.y-15);
-      this.addChild(labelValue);
 
-      var labelCost = new cc.LabelTTF(cost.toFixed(2), this._fontType, this._fontSize);
-      labelCost.setPosition(position.x+50,position.y-15);
+      var labelName = new cc.LabelTTF(name, this._fontType, this._fontSize-3);
+      labelName.setPosition(position.x,position.y-10);
+      this.addChild(labelName);
+
+      var labelCost = new cc.LabelTTF("Cost: ", this._fontType, this._fontSize);
+      labelCost.setPosition(position.x-60,position.y-40);
       this.addChild(labelCost);
 
-      var labelPrice = new cc.LabelTTF("Price:", this._fontType, this._fontSize);
-      labelPrice.setPosition(position.x-50,position.y-50);
-      this.addChild(labelPrice);
+      var labelCost = new cc.LabelTTF(cost.toFixed(2), this._fontType, this._fontSize);
+      labelCost.setPosition(position.x+10,position.y-40);
+      this.addChild(labelCost);
 
-      var costBg = new cc.Sprite(res.EditBoxBg);
-      costBg.setPosition(position.x,position.y-50);
-      this.addChild(costBg);
+      var costIcon = new cc.Sprite(res.IconBanana);
+      costIcon.setPosition(position.x+75,position.y-40);
+      this.addChild(costIcon);
+
+      var labelPrice = new cc.LabelTTF("Price:", this._fontType, this._fontSize);
+      labelPrice.setPosition(position.x-60,position.y-85);
+      this.addChild(labelPrice);
     },
 
     init:function(){
