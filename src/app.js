@@ -65,8 +65,6 @@ var HelloWorldLayer = cc.Layer.extend({
             );
         test.setScale(1,1);
         this.addChild(test);
-        test.setHistory(30);
-        test.setWinner('Advertiser 1');
     },
 
     onPlay:function(){
