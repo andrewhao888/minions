@@ -1,10 +1,4 @@
-var res = {
-    HelloWorld_png    : "res/HelloWorld.png",
-    CloseNormal_png   : "res/CloseNormal.png",
-    CloseSelected_png : "res/CloseSelected.png",
-    start_n_png       : "res/start_n.png",
-    start_s_png       : "res/start_s.png",
-    
+var res = { 
     StartBackground : "res/bg_fw_start.png",
     FWBackground : "res/bg_fw.png",
     RPTBackgroung : "res/bg_report.png",
