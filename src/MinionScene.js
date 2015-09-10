@@ -1,6 +1,7 @@
 var MinionsLayer = cc.Layer.extend({
   round:0,
   inventorys:[],
+  _centerPos:null,
 	ctor : function() {
 		this._super();
 		this.init();
@@ -8,6 +9,12 @@ var MinionsLayer = cc.Layer.extend({
 
 	init : function() {
 		this._super();
+
+    var winsize = cc.director.getWinSize();
+    var widthcenter = winsize.width / 2;
+    var hightcenter = winsize.height / 2;
+    this._centerPos = cc.p(widthcenter, hightcenter);
+
     this.initInventroy();
 	},
 
@@ -19,7 +26,7 @@ var MinionsLayer = cc.Layer.extend({
       this.initRound(this.round);
       this.sumUp();
     } else {
-      cc.director.runScene(new EndScene(123.4));
+      cc.director.runScene(new EndScene());
     }
     this.onShowReport();
   },
@@ -76,9 +83,7 @@ var MinionsLayer = cc.Layer.extend({
         res.BTRPTSelected,
         this.onShowReport, this)
       );
-    reportMenu.x = 0;
-    reportMenu.y = -210;
-    reportMenu.setScale(1, 0.8)
+    reportMenu.setPosition(this._centerPos.x-350, this._centerPos.y-680);
     this.addChild(reportMenu);
 
     var guideMenu = new cc.Menu(
@@ -87,8 +92,7 @@ var MinionsLayer = cc.Layer.extend({
             res.BTRPTSelected,
             this.onShowGuide, this)
         );
-    guideMenu.x = 750;
-    guideMenu.y = -150;
+    guideMenu.setPosition(this._centerPos.x+350, this._centerPos.y-680);
     this.addChild(guideMenu);
   },
 

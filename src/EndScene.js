@@ -21,6 +21,7 @@ var EndLayer = cc.Layer.extend({
     this.renderCast();
     if(Score > 0) this.renderWin();
     else this.renderLose();
+    this.renderReplay();
   },
 
   renderTitle:function(){
@@ -124,6 +125,22 @@ var EndLayer = cc.Layer.extend({
       );
     winAnimation.setPosition(this._centerPos.x-75, this._centerPos.y+150);
     this.addChild(winAnimation);
+  },
+
+  renderReplay:function(){
+    var replayMenu = new cc.Menu(
+      new cc.MenuItemImage(
+        res.BTReplayNormal,
+        res.BTReplaySelected,
+        this.onReplay, this
+      )
+    );
+    replayMenu.setPosition(this._centerPos.x+150, this._centerPos.y-350);
+    this.addChild(replayMenu);
+  },
+
+  onReplay:function(){
+    cc.director.runScene(new MinionScene());
   }
 });
 
