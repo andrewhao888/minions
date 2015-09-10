@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+	<dict>
+		<key>frames</key>
+		<dict>
+			<key>dave_hello_0.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,0},{220,220}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{220,220}</string>
+			</dict>
+			<key>dave_hello_1.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,220},{220,220}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{220,220}</string>
+			</dict>
+			<key>dave_hello_2.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,440},{220,220}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{220,220}</string>
+			</dict>
+			<key>dave_hello_3.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{0,660},{220,220}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{220,220}</string>
+			</dict>
+			<key>dave_hello_4.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{220,0},{220,220}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{220,220}</string>
+			</dict>
+			<key>dave_hello_5.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{440,0},{220,220}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{220,220}</string>
+			</dict>
+			<key>dave_hello_6.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{660,0},{220,220}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{220,220}</string>
+			</dict>
+			<key>dave_hello_7.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{220,220},{220,220}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{220,220}</string>
+			</dict>
+			<key>dave_hello_8.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{220,440},{220,220}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{220,220}</string>
+			</dict>
+			<key>dave_hello_9.png</key>
+			<dict>
+				<key>frame</key>
+				<string>{{220,660},{220,220}}</string>
+				<key>offset</key>
+				<string>{0,0}</string>
+				<key>rotated</key>
+				<false />
+				<key>sourceSize</key>
+				<string>{220,220}</string>
+			</dict>
+		</dict>
+		<key>metadata</key>
+		<dict>
+			<key>format</key>
+			<integer>2</integer>
+			<key>textureFileName</key>
+			<string>dave_hello.png</string>
+			<key>realTextureFileName</key>
+			<string>dave_hello.png</string>
+			<key>size</key>
+			<string>{1024,1024}</string>
+		</dict>
+		<key>texture</key>
+		<dict>
+			<key>width</key>
+			<integer>1024</integer>
+			<key>height</key>
+			<integer>1024</integer>
+		</dict>
+	</dict>
+</plist>

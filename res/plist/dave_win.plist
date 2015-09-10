@@ -4,7 +4,7 @@
 	<dict>
 		<key>frames</key>
 		<dict>
-			<key>tim_1.png</key>
+			<key>dave_win_0.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{0,0},{220,220}}</string>
@@ -15,7 +15,7 @@
 				<key>sourceSize</key>
 				<string>{220,220}</string>
 			</dict>
-			<key>tim_10.png</key>
+			<key>dave_win_1.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{0,220},{220,220}}</string>
@@ -26,7 +26,7 @@
 				<key>sourceSize</key>
 				<string>{220,220}</string>
 			</dict>
-			<key>tim_2.png</key>
+			<key>dave_win_2.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{0,440},{220,220}}</string>
@@ -37,7 +37,7 @@
 				<key>sourceSize</key>
 				<string>{220,220}</string>
 			</dict>
-			<key>tim_3.png</key>
+			<key>dave_win_3.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{0,660},{220,220}}</string>
@@ -48,7 +48,7 @@
 				<key>sourceSize</key>
 				<string>{220,220}</string>
 			</dict>
-			<key>tim_4.png</key>
+			<key>dave_win_4.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{220,0},{220,220}}</string>
@@ -59,7 +59,7 @@
 				<key>sourceSize</key>
 				<string>{220,220}</string>
 			</dict>
-			<key>tim_5.png</key>
+			<key>dave_win_5.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{440,0},{220,220}}</string>
@@ -70,7 +70,7 @@
 				<key>sourceSize</key>
 				<string>{220,220}</string>
 			</dict>
-			<key>tim_6.png</key>
+			<key>dave_win_6.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{660,0},{220,220}}</string>
@@ -81,7 +81,7 @@
 				<key>sourceSize</key>
 				<string>{220,220}</string>
 			</dict>
-			<key>tim_7.png</key>
+			<key>dave_win_7.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{220,220},{220,220}}</string>
@@ -92,21 +92,10 @@
 				<key>sourceSize</key>
 				<string>{220,220}</string>
 			</dict>
-			<key>tim_8.png</key>
+			<key>dave_win_8.png</key>
 			<dict>
 				<key>frame</key>
 				<string>{{220,440},{220,220}}</string>
-				<key>offset</key>
-				<string>{0,0}</string>
-				<key>rotated</key>
-				<false />
-				<key>sourceSize</key>
-				<string>{220,220}</string>
-			</dict>
-			<key>tim_9.png</key>
-			<dict>
-				<key>frame</key>
-				<string>{{220,660},{220,220}}</string>
 				<key>offset</key>
 				<string>{0,0}</string>
 				<key>rotated</key>
@@ -120,9 +109,9 @@
 			<key>format</key>
 			<integer>2</integer>
 			<key>textureFileName</key>
-			<string>Plist1.png</string>
+			<string>dave_win.png</string>
 			<key>realTextureFileName</key>
-			<string>Plist1.png</string>
+			<string>dave_win.png</string>
 			<key>size</key>
 			<string>{1024,1024}</string>
 		</dict>

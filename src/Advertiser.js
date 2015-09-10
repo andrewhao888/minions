@@ -9,20 +9,21 @@ function Advertiser(param) {
     var original_bid = this.bid;
     if (round_id == 1) {
       this.bid = Costs[inventory_id] * this.diff + this.fluctuate(inventory_id);
-    } else if (Advertiser[inventory_id] == this.id) {
-      this.bid = this.bid * (1 - this.decay()) + this.fluctuate(inventory_id);
+    } else if (Adver[inventory_id] === this.id-1) {
+      this.bid = Bid[inventory_id] * (1 - this.decay()) + this.fluctuate(inventory_id);
     } else {
-      this.bid = this.bid * (1 + this.enhance())  + this.fluctuate(inventory_id);
+      this.bid = Bid[inventory_id] * (1 + this.enhance())  + this.fluctuate(inventory_id);
     }
+    this.bLeft = this.getBLeft(inventory_id);
     if (this.bid >= this.bLeft) {
-      this.bid = this.getBLeft();
+      this.bid = this.bLeft;
     }
     return this.bid;
   };
 
   this.getBLeft = function(inventory_id) {
-    if (Advertiser[inventory_id] === this.id) {
-      this.bLeft = this.budget - this.bid;
+    if (Adver[inventory_id-1] === this.id) {
+      this.bLeft = this.bLeft - this.bid;
     } else {
       this.bLeft = this.bLeft;
     }
@@ -56,27 +57,5 @@ function Advertiser(param) {
   };
 
 }
-
-var param1 = {
-  id     : 1,
-  budget : 150,
-  diff   : 1.05
-};
-
-var param2 = {
-  id     : 2,
-  budget : 200,
-  diff   : 1
-};
-
-var param3 = {
-  id     : 3,
-  budget : 90,
-  diff   : 1.1
-};
-
-var adv1 = new Advertiser(param1);
-var adv2 = new Advertiser(param2);
-var adv3 = new Advertiser(param3);
 
 

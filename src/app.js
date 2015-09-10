@@ -1,70 +1,31 @@
 
-var HelloWorldLayer = cc.Layer.extend({
+var StartLayer = cc.Layer.extend({
     sprite:null,
     MiniBox:null,
     ctor:function () {
-        //////////////////////////////
-        // 1. super init first
         this._super();
 
-        /////////////////////////////
-        // 2. add a menu item with "X" image, which is clicked to quit the program
-        //    you may modify it.
-        // ask the window size
-        var size = cc.winSize;
+        var winsize = cc.director.getWinSize();
+        var widthcenter = winsize.width / 2;
+        var hightcenter = winsize.height / 2;
+        var centerPos = cc.p(widthcenter, hightcenter);
 
-        // // add a "close" icon to exit the progress. it's an autorelease object
-        var closeItem = new cc.MenuItemImage(
-        	res.BTPlayNormal,
-        	res.BTPlaySelected,
-            this.onPlay, this);
-        closeItem.attr({
-            x: size.width / 2,
-            y: size.height / 2,
-            anchorX: 0.5,
-            anchorY: 0.5
-        });
-
-        var menu = new cc.Menu(closeItem);
-        menu.x = 0;
-        menu.y = 0;
-        this.addChild(menu, 1);
-
-        // /////////////////////////////
-        // // 3. add your codes below...
-        // // add a label shows "Hello World"
-        // // create and initialize a label
-        // var helloLabel = new cc.LabelTTF("Hello World", "Arial", 38);
-        // // position the label on the center of the screen
-        // helloLabel.x = size.width / 2;
-        // helloLabel.y = 0;
-        // // add the label as a child to this layer
-        // this.addChild(helloLabel, 5);
-
-        // add "HelloWorld" splash screen"
-        this.sprite = new cc.Sprite(res.FWBackground);
-        this.sprite.attr({
-            x: size.width / 2,
-            y: size.height / 2,
-            scale: 0.5,
-            rotation: 180
-        });
-        this.addChild(this.sprite, 0);
-
-        this.sprite.runAction(
-            cc.sequence(
-                cc.rotateTo(0.5, 0),
-                cc.scaleTo(0.5, 1, 1)
-            )
+        // play button
+        var playButton = new ccui.Button(
+            res.BTPlayNormal,
+            res.BTPlaySelected
         );
 
-        test = new MinionBox(
-            cc.p(123,544),
-            res.Inventory1,
-            1234,'3-body'
-            );
-        // test.setScale(1,1);
-        this.addChild(test,5);
+        playButton.setTouchEnabled(true);
+        playButton.setPressedActionEnabled(true);
+        playButton.x = winsize.width / 2;
+        playButton.y = winsize.height / 2;
+        playButton.addTouchEventListener(this.onPlay,this);
+        this.addChild(playButton,10);
+
+        var spriteBG = new cc.Sprite(res.FWBackground);
+        spriteBG.setPosition(centerPos);
+        this.addChild(spriteBG);
 
 
         var reportMenu = new cc.Menu(
@@ -97,10 +58,10 @@ var HelloWorldLayer = cc.Layer.extend({
 
 });
 
-var HelloWorldScene = cc.Scene.extend({
+var StartScene = cc.Scene.extend({
     onEnter:function () {
         this._super();
-        var layer = new HelloWorldLayer();
+        var layer = new StartLayer();
         this.addChild(layer);
     }
 });
