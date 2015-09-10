@@ -1,4 +1,3 @@
-
 var MinionsLayer = cc.Layer.extend({
   round:0,
   inventorys:[],
@@ -78,7 +77,6 @@ var MinionsLayer = cc.Layer.extend({
   },
 
 	initRound : function(round_id) {
-
 		var advertisers = [];
 		for(var a = 0; a < 3; a++) {
 			advertisers[a] = new Advertiser(AdvertiserParam[a]);
@@ -123,7 +121,6 @@ var MinionsLayer = cc.Layer.extend({
   }
 
 });
-
 
 var MinionScene = cc.Scene.extend({
 	onEnter : function() {

@@ -13,7 +13,6 @@ var AdvertiserLayer = cc.Layer.extend({
     var centerPos = cc.p(widthcenter, hightcenter);
 
 
-
     cc.spriteFrameCache.addSpriteFrames(res.AdvBMW_plist);
     var minion1 = new cc.SpriteBatchNode(res.AdvBMW_png);
     minion1.setPosition(widthcenter - 180, hightcenter + 350);
@@ -31,7 +30,6 @@ var AdvertiserLayer = cc.Layer.extend({
     this.sprite = new cc.Sprite("#stuart_bmw_0.png"); 
     this.sprite.runAction(this.runningAction);
     minion1.addChild(this.sprite);
-
 
 
     cc.spriteFrameCache.addSpriteFrames(res.AdvBurger_plist);
@@ -52,7 +50,6 @@ var AdvertiserLayer = cc.Layer.extend({
     this.sprite.setScale(1.2, 1.2);
     this.sprite.runAction(this.runningAction);
     minion2.addChild(this.sprite);
-
 
 
     cc.spriteFrameCache.addSpriteFrames(res.AdvCola_plist);
