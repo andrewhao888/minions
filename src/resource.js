@@ -6,7 +6,8 @@ var res = {
     start_s_png : "res/start_s.png",
 
     FWBackground : "res/fw_bg.png",
-    
+    ReportLayer : "res/reportLayer.json",
+
     BTPlayNormal : "res/button/bt_play_normal.png",
     BTPlaySelected : "res/button/bt_play_selected.png",
     BTGoNormal : "res/button/bt_go_normal.png",
@@ -15,7 +16,7 @@ var res = {
     BTBackSelected : "res/button/bt_back_selected.png",
     BTRPTNormal : "res/button/bt_rpt_normal.png",
     BTRPTSelected : "res/button/bt_rpt_selected.png",
-    
+
     EditBoxBg : "res/edit_box_bg.png",
     EditBoxFront : "res/edit_box_front.png",
     IconBanana : "res/icon_banana.png",

@@ -59,12 +59,12 @@ var HelloWorldLayer = cc.Layer.extend({
         );
 
         test = new MinionBox(
-            cc.p(500,600),
+            cc.p(123,544),
             res.Inventory1,
             1234,'3-body'
             );
-        test.setScale(1,1);
-        this.addChild(test,2);
+        // test.setScale(1,1);
+        this.addChild(test,5);
 
 
         var reportMenu = new cc.Menu(
@@ -87,8 +87,10 @@ var HelloWorldLayer = cc.Layer.extend({
             0,
             ['Bro','Ave','Slv','HoC','Flash','3-Body'],
             [1,2,3,4,5,6],
+            [1,2,3,4,5,6],
             [2,3,4,5,5,6],
-            ['w1','w3','w3','w2','w1','w3']
+            ['w1','w3','w3','w2','w1','w3'],
+            123
             );
         this.addChild(rep,90);
     }
