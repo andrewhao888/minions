@@ -14,9 +14,9 @@ var MinionsLayer = cc.Layer.extend({
   onPlay : function() {
     if (this.round < 5) {
       this.round += 1;
-    cc.log(this.round);
       this.getAsk(this.inventorys);
       this.initRound(this.round);
+      Round = this.round;
       this.sumUp();
     } else {
       cc.director.runScene(new EndScene());
@@ -115,7 +115,11 @@ var MinionsLayer = cc.Layer.extend({
   sumUp : function() {
     var sum = 0;
     for (var i = 0; i < 6; i++) {
-      sum += Asks[i] - Costs[i];
+      if (Adver[i] != 0) {
+        sum += Asks[i] - Costs[i];
+      } else {
+        sum -= Costs[i];
+      }
     }
     Score += sum;
   }
