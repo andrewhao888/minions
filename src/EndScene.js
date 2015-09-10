@@ -18,6 +18,7 @@ var EndLayer = cc.Layer.extend({
 
     this.renderTitle();
     this.renderScore();
+    this.render();
     this.renderCast();
   },
 
@@ -72,6 +73,29 @@ var EndLayer = cc.Layer.extend({
       label.setFontFillColor(new cc.Color(255,255,0));
       this.addChild(label);
     }
+  },
+
+  render:function(){
+    cc.spriteFrameCache.addSpriteFrames(res.EndWin_plist);
+    queuePlist = new cc.SpriteBatchNode(res.EndWin_png);
+    queuePlist.setScale(2, 2);
+    queuePlist.x = -800;
+    queuePlist.y = -1035;
+    this.addChild(queuePlist,2);
+
+    var animFrames = [];
+    for (var i = 0; i < 9; i++) {
+      var str = "dave_win_" + i + ".png"
+      var frame = cc.spriteFrameCache.getSpriteFrame(str);
+      animFrames.push(frame);
+    }
+
+    var animation = new cc.Animation(animFrames, 0.1);
+    this.runningAction = new cc.RepeatForever(new cc.Animate(animation));
+    winAnimation = new cc.Sprite("#dave_win_0.png");
+    winAnimation.attr({x:400, y:500});
+    winAnimation.runAction(this.runningAction);
+    queuePlist.addChild(winAnimation);
   }
 });
 
