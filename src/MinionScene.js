@@ -17,7 +17,7 @@ var MinionsLayer = cc.Layer.extend({
     cc.log(this.round);
       this.initRound(this.round);
     } else {
-      cc.director.runScene(new EndScene());
+      cc.director.runScene(new EndScene(123.4));
     }
     this.onShowReport();
   },
