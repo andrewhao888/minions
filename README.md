@@ -1,2 +1,2 @@
 # minions
-4 Fronts for FW Hackthon
+4 Fronts for FW Hackathon

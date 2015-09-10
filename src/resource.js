@@ -17,6 +17,7 @@ var res = {
     Inventory1: "res/Inventory/inventory_1.png"
 };
 
+
 var g_resources = [];
 for (var i in res) {
     g_resources.push(res[i]);
