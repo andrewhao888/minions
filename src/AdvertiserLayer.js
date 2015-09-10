@@ -45,10 +45,25 @@ var AdvertiserLayer = cc.Layer.extend({
     }
 
     var animation2 = new cc.Animation(animFrames2, 0.1);
-    this.runningAction = new cc.RepeatForever(new cc.Animate(animation2));
+    this.runningAction = new cc.Animate(animation2);
     this.sprite = new cc.Sprite("#tim_burger_0.png"); 
     this.sprite.setScale(1.2, 1.2);
-    this.sprite.runAction(this.runningAction);
+    
+    var rand = Math.random() * 0.1;
+    var delay = cc.DelayTime.create(rand);
+    cc.Sequence.create(
+      cc.DelayTime.create(rand),
+      cc.RepeatForever.create(cc.Animate.create(animation)))
+    );
+
+var delay = cc.DelayTime.create(1);
+var action = cc.FadeIn.create(delay);
+
+    while(true) {
+      this.sprite.runAction(this.runningAction);
+    };
+
+
     minion2.addChild(this.sprite);
 
 
