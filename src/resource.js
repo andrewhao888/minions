@@ -5,6 +5,8 @@ var res = {
     start_n_png       : "res/start_n.png",
     start_s_png       : "res/start_s.png",
     
+    FWBackground : "res/fw_bg.png",
+    
     BTPlayNormal : "res/button/bt_play_normal.png",
     BTPlaySelected : "res/button/bt_play_selected.png",
     BTGoNormal : "res/button/bt_go_normal.png",
@@ -41,7 +43,9 @@ var res = {
     EndLose_png : "res/plist/jorge_lose.png",
 
     Hello_plist : "res/plist/dave_hello.plist",
-    Hello_png : "res/plist/dave_hello.png"
+    Hello_png : "res/plist/dave_hello.png",
+    Queue_plist : "res/plist/queue.plist",
+    Queue_png : "res/plist/queue.png"
 };
 
 
