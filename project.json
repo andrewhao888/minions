@@ -16,8 +16,9 @@
         "src/DataShare.js",
         "src/MinionBox.js",
         "src/Advertiser.js",
-        "src/BackgroundLayer.js",
         "src/MinionScene.js",
+        "src/BackgroundLayer.js",
+        "src/AdvertiserLayer.js",
         "src/EndScene.js"
     ]
 }

@@ -1,6 +1,7 @@
 
 var MinionsLayer = cc.Layer.extend({
   round:0,
+  inventorys:[],
 	ctor : function() {
 		this._super();
 		this.init();
@@ -15,7 +16,10 @@ var MinionsLayer = cc.Layer.extend({
     if (this.round < 5) {
       this.round += 1;
     cc.log(this.round);
+      this.getAsk(this.inventorys);
       this.initRound(this.round);
+      this.sumUp();
+      // this.addChild(new ReportLayer());
     } else {
       cc.director.runScene(new EndScene());
     }
@@ -32,17 +36,16 @@ var MinionsLayer = cc.Layer.extend({
     goMenu.setScale(2, 2);
     this.addChild(goMenu);
 
-    var inventorys = [];
     for(var i = 0; i < 6; i++) {
       var param = InventoryParam[i]
-      inventorys[i] = new MinionBox(
+      this.inventorys[i] = new MinionBox(
         cc.p(param.position.x, param.position.y),
         param.logoBgRes,
         param.cost,
         param.name
       );
-      inventorys[i].setScale(2, 2);
-      this.addChild(inventorys[i]);
+      this.inventorys[i].setScale(2, 2);
+      this.addChild(this.inventorys[i]);
     };
   },
 
@@ -57,6 +60,12 @@ var MinionsLayer = cc.Layer.extend({
 			this.biding(i, advertisers, round_id);
 		};
 	},
+
+  getAsk : function(inventorys) {
+    for (var i = 0; i < 6; i++) {
+      Asks[i] = inventorys[i].getAsk();
+    }
+  },
 
 	biding : function(inv_id, advertisers, round_id) {
 		var ask = Asks[inv_id];
@@ -74,7 +83,15 @@ var MinionsLayer = cc.Layer.extend({
 		Adver[inv_id] = winner;
 		Bid[inv_id] = bestBid;
 
-	}
+	},
+
+  sumUp : function() {
+    var sum = 0;
+    for (var i = 0; i < 6; i++) {
+      sum += Bid[i] - Costs[i];
+    }
+    Score = sum;
+  }
 
 });
 
@@ -83,7 +100,8 @@ var MinionScene = cc.Scene.extend({
 	onEnter : function() {
 		this._super();
     this.addChild(new BackgroundLayer());
-    var minionLayer = new MinionsLayer()
+    this.addChild(new AdvertiserLayer());
+    var minionLayer = new MinionsLayer();
     minionLayer.setScale(0.5, 0.5);
 		this.addChild(minionLayer);
 	}
