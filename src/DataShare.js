@@ -22,3 +22,48 @@ AdvertiserParam = [
   diff   : 1.1
 }
 ]
+
+InventoryParam = [
+{ 
+  position  : { x : -22.0,
+                y : 200.0 },
+  logoBgRes : res.Inventory1,
+  cost      : 10,
+  name      : '1'
+},
+{
+  position  : { x : 108.0,
+                y : 200.0 },
+  logoBgRes : res.Inventory2,
+  cost      : 10,
+  name      : '2'
+},
+{
+  position  : { x : 238.0,
+                y : 200.0 },
+  logoBgRes : res.Inventory3,
+  cost      : 10,
+  name      : '3'
+},
+{
+  position  : { x : -22.0,
+                y : 40.0 },
+  logoBgRes : res.Inventory4,
+  cost      : 10,
+  name      : '4'
+},
+{
+  position  : { x : 108.0,
+                y : 40.0 },
+  logoBgRes : res.Inventory5,
+  cost      : 10,
+  name      : '5'
+},
+{
+  position  : { x : 238.0,
+                y : 40.0 },
+  logoBgRes : res.Inventory6,
+  cost      : 10,
+  name      : '6'
+}
+]
