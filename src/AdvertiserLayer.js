@@ -13,6 +13,7 @@ var AdvertiserLayer = cc.Layer.extend({
     var centerPos = cc.p(widthcenter, hightcenter);
 
 
+
     cc.spriteFrameCache.addSpriteFrames(res.AdvBMW_plist);
     var minion1 = new cc.SpriteBatchNode(res.AdvBMW_png);
     minion1.setPosition(widthcenter - 180, hightcenter + 350);

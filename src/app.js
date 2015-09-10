@@ -1,5 +1,5 @@
 
-var HelloWorldLayer = cc.Layer.extend({
+var StartLayer = cc.Layer.extend({
     sprite:null,
     MiniBox:null,
     ctor:function () {
@@ -10,38 +10,33 @@ var HelloWorldLayer = cc.Layer.extend({
         var hightcenter = winsize.height / 2;
         var centerPos = cc.p(widthcenter, hightcenter);
 
-        var closeItem = new cc.MenuItemImage(
+        // play button
+        var playButton = new ccui.Button(
             res.BTPlayNormal,
-            res.BTPlaySelected,
-            this.onPlay, this);
-        closeItem.attr({
-            x: widthcenter,
-            y: hightcenter,
-            anchorX: 0.5,
-            anchorY: 0.5
-        });
+            res.BTPlaySelected
+        );
 
-        var menu = new cc.Menu(closeItem);
-        menu.x = 0;
-        menu.y = 0;
-        this.addChild(menu, 1);
-        
+        playButton.setTouchEnabled(true);
+        playButton.setPressedActionEnabled(true);
+        playButton.x = winsize.width / 2;
+        playButton.y = winsize.height / 2;
+        playButton.addTouchEventListener(this.onPlay,this);
+        this.addChild(playButton,10);
+
         var spriteBG = new cc.Sprite(res.FWBackground);
         spriteBG.setPosition(centerPos);
         this.addChild(spriteBG);
-  
     },
 
     onPlay:function(){
       cc.director.runScene(new MinionScene());
-    }
-
+    },
 });
 
-var HelloWorldScene = cc.Scene.extend({
+var StartScene = cc.Scene.extend({
     onEnter:function () {
         this._super();
-        var layer = new HelloWorldLayer();
+        var layer = new StartLayer();
         this.addChild(layer);
     }
 });

@@ -19,10 +19,27 @@ var MinionsLayer = cc.Layer.extend({
       this.getAsk(this.inventorys);
       this.initRound(this.round);
       this.sumUp();
-      // this.addChild(new ReportLayer());
     } else {
       cc.director.runScene(new EndScene());
     }
+    this.onShowReport();
+  },
+
+  onShowReport:function(){
+    var name = [];
+    for(var i = 0; i < 6; i++) {
+      name[i] = InventoryParam[i].name
+    }
+    var report = new ReportLayer(
+        name,
+        Costs,
+        Asks,
+        Bid,
+        Adver,
+        Score
+        );
+    report.setScale(2);
+    this.addChild(report,90);
   },
 
   initInventroy : function() {
@@ -41,12 +58,23 @@ var MinionsLayer = cc.Layer.extend({
       this.inventorys[i] = new MinionBox(
         cc.p(param.position.x, param.position.y),
         param.logoBgRes,
-        param.cost,
+        Costs[i],
         param.name
       );
       this.inventorys[i].setScale(2, 2);
       this.addChild(this.inventorys[i]);
     };
+
+    var reportMenu = new cc.Menu(
+        new cc.MenuItemImage(
+            res.BTRPTNormal,
+            res.BTRPTSelected,
+            this.onShowReport, this)
+        );
+    reportMenu.x = -100;
+    reportMenu.y = -150;
+    this.addChild(reportMenu);
+
   },
 
 	initRound : function(round_id) {
@@ -88,9 +116,9 @@ var MinionsLayer = cc.Layer.extend({
   sumUp : function() {
     var sum = 0;
     for (var i = 0; i < 6; i++) {
-      sum += Bid[i] - Costs[i];
+      sum += Asks[i] - Costs[i];
     }
-    Score = sum;
+    Score += sum;
   }
 
 });

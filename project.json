@@ -8,7 +8,7 @@
     "renderMode" : 0,
     "engineDir":"frameworks/cocos2d-html5",
 
-    "modules" : ["cocos2d", "extensions"], 
+    "modules" : ["cocos2d", "extensions"],
 
     "jsList" : [
         "src/resource.js",
@@ -16,9 +16,11 @@
         "src/DataShare.js",
         "src/MinionBox.js",
         "src/Advertiser.js",
-        "src/MinionScene.js",
         "src/BackgroundLayer.js",
+        "src/Advertiser.js",
+        "src/MinionScene.js",
         "src/AdvertiserLayer.js",
-        "src/EndScene.js"
+        "src/EndScene.js",
+        "src/ReportLayer.js"
     ]
 }

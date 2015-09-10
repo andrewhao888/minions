@@ -9,7 +9,7 @@ function Advertiser(param) {
     var original_bid = this.bid;
     if (round_id == 1) {
       this.bid = Costs[inventory_id] * this.diff + this.fluctuate(inventory_id);
-    } else if (Adver[inventory_id] === this.id-1) {
+    } else if (Adver[inventory_id] === this.id - 1) {
       this.bid = Bid[inventory_id] * (1 - this.decay()) + this.fluctuate(inventory_id);
     } else {
       this.bid = Bid[inventory_id] * (1 + this.enhance())  + this.fluctuate(inventory_id);
@@ -23,7 +23,7 @@ function Advertiser(param) {
 
   this.getBLeft = function(inventory_id) {
     if (Adver[inventory_id-1] === this.id) {
-      this.bLeft = this.bLeft - this.bid;
+      this.bLeft = this.bLeft - Asks[inventory_id];
     } else {
       this.bLeft = this.bLeft;
     }
