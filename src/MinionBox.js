@@ -12,13 +12,7 @@ var MinionBox = cc.Sprite.extend({
     //   name:      '3-body'
     ctor:function(position, logoBgRes, cost, name) {
       this._super();
-
-      this._position = position;
-      this.renderInventory(logoBgRes);
-      this.renderEditBox();
-      this.renderLabels(cost, name);
-
-      this.init();
+      this.init(position, logoBgRes, cost, name);
     },
 
     renderInventory:function(path){
@@ -66,8 +60,12 @@ var MinionBox = cc.Sprite.extend({
       this.addChild(labelPrice);
     },
 
-    init:function(){
+    init:function(position, logoBgRes, cost, name) {
       this._super();
+      this._position = position;
+      this.renderInventory(logoBgRes);
+      this.renderEditBox();
+      this.renderLabels(cost, name);
     },
 
     getAsk:function(){
