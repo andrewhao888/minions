@@ -8,6 +8,7 @@ var res = {
     StartBackground : "res/bg_fw_start.png",
     FWBackground : "res/bg_fw.png",
     RPTBackgroung : "res/bg_report.png",
+    GuideBackground : "res/bg_guide.png",
     
     LogoFW : "res/logo_fw.png",
     LogoMinions : "res/logo_minions.png",
