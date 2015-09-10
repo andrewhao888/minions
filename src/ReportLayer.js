@@ -6,9 +6,9 @@ var ReportLayer = cc.Layer.extend({
   _vertical:null,
   m_touchListener:null,
 
-  ctor : function (round, inventories, costs, asks, bids, wins, total) {
+  ctor : function (inventories, costs, asks, bids, wins, total) {
     this._super();
-    this.init(round, inventories, costs, asks, bids, wins, total);
+    this.init(inventories, costs, asks, bids, wins, total);
 
     var touchListener = {
       event: cc.EventListener.TOUCH_ONE_BY_ONE,
@@ -37,7 +37,7 @@ var ReportLayer = cc.Layer.extend({
     return true;
   },
 
-  init : function (round, inventories, costs, asks, bids, wins, total) {
+  init : function (inventories, costs, asks, bids, wins, total) {
     this._super();
 
     var winsize      = cc.director.getWinSize();
@@ -54,19 +54,10 @@ var ReportLayer = cc.Layer.extend({
   },
 
   renderBg:function(){
-    bgImg = new cc.Sprite(res.FWBackground);
-    bgImg.setPosition(this._centerPos);
+    bgImg = new cc.Sprite(res.RPTBackground);
+    bgImg.setPosition(this._centerPos.x, this._centerPos.y - 100);
     this.addChild(bgImg);
   },
-
-  // renderTitle:function(round){
-  //   var rounds = ['Init', '1st','2nd','3rd','4th','Final'];
-  //   var title = 'The ' + rounds[round] + ' Round Report';
-  //   var labelTitle = new cc.LabelTTF(
-  //     title, this._fontType, this._fontSize+10);
-  //   labelTitle.setPosition(this._centerPos.x,this._centerPos.y+500);
-  //   this.addChild(labelTitle);
-  // },
 
   renderGrid:function(inventories, costs, asks, bids, wins, total){
     columnTitle = ['Inventory','Cost','Ask','Sold','Winner'];
@@ -145,35 +136,13 @@ var ReportLayer = cc.Layer.extend({
     var coin = new cc.Sprite(res.IconBanana);
     coin.setPosition(482.23,this._vertical[9]);
     this.addChild(coin);
-
-
-
-
-
-    // var grid = ccs.load(res.ReportLayer).node;
-    // var sum = [0, 0, 0];
-    // for (var i = 0; i < 6; i++){
-    //   ccui.helper.seekWidgetByName(grid, "winner_" + i).setString(wins[i]);
-    //   ccui.helper.seekWidgetByName(grid, "cell_cost_" + i).setString(costs[i]);
-    //   ccui.helper.seekWidgetByName(grid, "cell_ask_" + i).setString(asks[i]);
-    //   ccui.helper.seekWidgetByName(grid, "cell_sold_" + i).setString(bids[i]);
-    //   ccui.helper.seekWidgetByName(grid, "cell_inventory_" + i).setString(inventories[i]);
-    //   sum[0] += costs[i];
-    //   sum[1] += asks[i];
-    //   sum[2] += bids[i];
-    // }
-    // for (var i = 0; i < 3; i++){
-    //   ccui.helper.seekWidgetByName(grid, "sum_" + i).setString(sum[i]);
-    // }
-    // ccui.helper.seekWidgetByName(grid, "total").setString(total);
-    // this.addChild(grid);
   },
 
   renderClose:function(){
     var menu = new cc.Menu(
       new cc.MenuItemImage(
-        res.BTPlayNormal,
-        res.BTPlaySelected,
+        res.BTBackNormal,
+        res.BTBackSelected,
         this.onClose, this
       ));
     menu.x = this._centerPos.x;

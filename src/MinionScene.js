@@ -19,6 +19,20 @@ var MinionsLayer = cc.Layer.extend({
     } else {
       cc.director.runScene(new EndScene());
     }
+    this.onShowReport();
+  },
+
+  onShowReport:function(){
+    var report = new ReportLayer(
+        ['Bro','Ave','Slv','HoC','Flash','3-Body'],
+        Costs,
+        Asks,
+        Bid,
+        Adver,
+        123
+        );
+    report.setScale(2);
+    this.addChild(report,90);
   },
 
   initInventroy : function() {
@@ -43,7 +57,18 @@ var MinionsLayer = cc.Layer.extend({
       );
       inventorys[i].setScale(2, 2);
       this.addChild(inventorys[i]);
-    };
+    }
+
+    var reportMenu = new cc.Menu(
+        new cc.MenuItemImage(
+            res.BTRPTNormal,
+            res.BTRPTSelected,
+            this.onShowReport, this)
+        );
+    reportMenu.x = -100;
+    reportMenu.y = -150;
+    this.addChild(reportMenu);
+
   },
 
 	initRound : function(round_id) {

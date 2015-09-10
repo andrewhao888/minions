@@ -17,9 +17,7 @@
         "src/MinionBox.js",
         "src/Advertiser.js",
         "src/BackgroundLayer.js",
-        "src/BoxLayer.js",
         "src/ReportLayer.js",
-        "src/MinionLayer.js",
         "src/Advertiser.js",
         "src/MinionScene.js",
         "src/EndScene.js"

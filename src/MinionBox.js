@@ -74,5 +74,9 @@ var MinionBox = cc.Sprite.extend({
       var num = Number(this.InputBox.getString());
       if(isNaN(num)) return 0;
       else  return num;
+    },
+
+    clearAsk:function(){
+      this.InputBox.setString('');
     }
 })

@@ -26,36 +26,11 @@ var StartLayer = cc.Layer.extend({
         var spriteBG = new cc.Sprite(res.FWBackground);
         spriteBG.setPosition(centerPos);
         this.addChild(spriteBG);
-
-
-        var reportMenu = new cc.Menu(
-            new cc.MenuItemImage(
-                res.IconBanana,
-                res.IconBanana,
-                this.onShowReport, this)
-            );
-        reportMenu.x = 350;
-        reportMenu.y = 350;
-        this.addChild(reportMenu,3);
     },
 
     onPlay:function(){
       cc.director.runScene(new MinionScene());
     },
-
-    onShowReport:function(){
-        rep = new ReportLayer(
-            0,
-            ['Bro','Ave','Slv','HoC','Flash','3-Body'],
-            [1,2,3,4,5,6],
-            [1,2,3,4,5,6],
-            [2,3,4,5,5,6],
-            ['w1','w3','w3','w2','w1','w3'],
-            123
-            );
-        this.addChild(rep,90);
-    }
-
 });
 
 var StartScene = cc.Scene.extend({
