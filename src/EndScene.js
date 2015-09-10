@@ -19,7 +19,7 @@ var EndLayer = cc.Layer.extend({
     this.renderTitle();
     this.renderScore();
     this.renderCast();
-    if(Score < 0) this.renderWin();
+    if(Score > 0) this.renderWin();
     else this.renderLose();
   },
 
