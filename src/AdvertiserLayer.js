@@ -36,7 +36,7 @@ var AdvertiserLayer = cc.Layer.extend({
 
     cc.spriteFrameCache.addSpriteFrames(res.AdvBurger_plist);
     var minion2 = new cc.SpriteBatchNode(res.AdvBurger_png);
-    minion2.setPosition(widthcenter, hightcenter + 350);
+    minion2.setPosition(widthcenter, hightcenter + 370);
     this.addChild(minion2);
 
     var animFrames2 = [];
@@ -49,6 +49,7 @@ var AdvertiserLayer = cc.Layer.extend({
     var animation2 = new cc.Animation(animFrames2, 0.1);
     this.runningAction = new cc.RepeatForever(new cc.Animate(animation2));
     this.sprite = new cc.Sprite("#tim_burger_0.png"); 
+    this.sprite.setScale(1.2, 1.2);
     this.sprite.runAction(this.runningAction);
     minion2.addChild(this.sprite);
 
@@ -56,7 +57,7 @@ var AdvertiserLayer = cc.Layer.extend({
 
     cc.spriteFrameCache.addSpriteFrames(res.AdvCola_plist);
     var minion3 = new cc.SpriteBatchNode(res.AdvCola_png);
-    minion3.setPosition(widthcenter + 180, hightcenter + 350);
+    minion3.setPosition(widthcenter + 180, hightcenter + 340);
     this.addChild(minion3);
 
     var animFrames3 = [];

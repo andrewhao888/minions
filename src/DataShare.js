@@ -26,37 +26,37 @@ AdvertiserParam = [
 InventoryParam = [
 { 
   position  : { x : -22.0,
-                y : 200.0 },
+                y : 220.0 },
   logoBgRes : res.Inventory1,
   name      : 'Life'
 },
 {
   position  : { x : 108.0,
-                y : 200.0 },
+                y : 220.0 },
   logoBgRes : res.Inventory2,
   name      : 'Game of Throne'
 },
 {
   position  : { x : 238.0,
-                y : 200.0 },
+                y : 220.0 },
   logoBgRes : res.Inventory3,
   name      : 'Lion King'
 },
 {
   position  : { x : -22.0,
-                y : 40.0 },
+                y : 55.0 },
   logoBgRes : res.Inventory4,
   name      : 'Minion'
 },
 {
   position  : { x : 108.0,
-                y : 40.0 },
+                y : 55.0 },
   logoBgRes : res.Inventory5,
   name      : 'Big Bang'
 },
 {
   position  : { x : 238.0,
-                y : 40.0 },
+                y : 55.0 },
   logoBgRes : res.Inventory6,
   name      : 'The Voice'
 }

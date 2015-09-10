@@ -92,6 +92,7 @@ var MinionsLayer = cc.Layer.extend({
   getAsk : function(inventorys) {
     for (var i = 0; i < 6; i++) {
       Asks[i] = inventorys[i].getAsk();
+      inventorys[i].clearAsk();
     }
   },
 
