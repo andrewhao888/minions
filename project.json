@@ -2,7 +2,7 @@
     "project_type": "javascript",
 
     "debugMode" : 1,
-    "showFPS" : true,
+    "showFPS" : false,
     "frameRate" : 60,
     "id" : "gameCanvas",
     "renderMode" : 0,
@@ -15,10 +15,9 @@
         "src/app.js",
         "src/DataShare.js",
         "src/MinionBox.js",
-        "src/MinionScene.js",
+        "src/Advertiser.js",
         "src/BackgroundLayer.js",
-        "src/BoxLayer.js",
-        "src/MinionLayer.js",
-        "src/Advertiser.js"
+        "src/MinionScene.js",
+        "src/EndScene.js"
     ]
 }

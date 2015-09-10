@@ -1,11 +1,9 @@
 var res = {
-    HelloWorld_png : "res/HelloWorld.png",
-    CloseNormal_png : "res/CloseNormal.png",
+    HelloWorld_png    : "res/HelloWorld.png",
+    CloseNormal_png   : "res/CloseNormal.png",
     CloseSelected_png : "res/CloseSelected.png",
-    start_n_png : "res/start_n.png",
-    start_s_png : "res/start_s.png",
-
-    FWBackground : "res/fw_bg.png",
+    start_n_png       : "res/start_n.png",
+    start_s_png       : "res/start_s.png",
     
     BTPlayNormal : "res/button/bt_play_normal.png",
     BTPlaySelected : "res/button/bt_play_selected.png",
