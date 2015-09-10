@@ -18,8 +18,9 @@ var EndLayer = cc.Layer.extend({
 
     this.renderTitle();
     this.renderScore();
-    this.render();
     this.renderCast();
+    if(Score < 0) this.renderWin();
+    else this.renderLose();
   },
 
   renderTitle:function(){
@@ -75,27 +76,54 @@ var EndLayer = cc.Layer.extend({
     }
   },
 
-  render:function(){
-    cc.spriteFrameCache.addSpriteFrames(res.EndWin_plist);
-    queuePlist = new cc.SpriteBatchNode(res.EndWin_png);
-    queuePlist.setScale(2, 2);
-    queuePlist.x = -800;
-    queuePlist.y = -1035;
-    this.addChild(queuePlist,2);
+  renderLose:function(){
+    cc.spriteFrameCache.addSpriteFrames(res.EndLose_plist);
+    var losePng = new cc.SpriteBatchNode(res.EndLose_png);
+    losePng.setPosition(this._centerPos.x, this._centerPos.y);
+    this.addChild(losePng);
 
-    var animFrames = [];
-    for (var i = 0; i < 9; i++) {
-      var str = "dave_win_" + i + ".png"
-      var frame = cc.spriteFrameCache.getSpriteFrame(str);
-      animFrames.push(frame);
+    var loseFrames = [];
+    for (var i = 0; i < 8; i++) {
+      loseFrames.push(
+        cc.spriteFrameCache.getSpriteFrame(
+          "jorge_lose_" + i + ".png")
+      );
     }
 
-    var animation = new cc.Animation(animFrames, 0.1);
-    this.runningAction = new cc.RepeatForever(new cc.Animate(animation));
-    winAnimation = new cc.Sprite("#dave_win_0.png");
-    winAnimation.attr({x:400, y:500});
-    winAnimation.runAction(this.runningAction);
-    queuePlist.addChild(winAnimation);
+    var loseAnimation = new cc.Sprite("#jorge_lose_0.png");
+    loseAnimation.runAction(
+      new cc.RepeatForever(
+        new cc.Animate(
+          new cc.Animation(loseFrames, 0.1))
+        )
+      );
+    loseAnimation.setPosition(this._centerPos.x-75, this._centerPos.y+150);
+    this.addChild(loseAnimation);
+  },
+
+  renderWin:function(){
+    cc.spriteFrameCache.addSpriteFrames(res.EndWin_plist);
+    var winPng = new cc.SpriteBatchNode(res.EndWin_png);
+    winPng.setPosition(this._centerPos.x, this._centerPos.y);
+    this.addChild(winPng);
+
+    var winFrames = [];
+    for (var i = 0; i < 9; i++) {
+      winFrames.push(
+        cc.spriteFrameCache.getSpriteFrame(
+          "dave_win_" + i + ".png")
+      );
+    }
+
+    var winAnimation = new cc.Sprite("#dave_win_0.png");
+    winAnimation.runAction(
+      new cc.RepeatForever(
+        new cc.Animate(
+          new cc.Animation(winFrames, 0.1))
+        )
+      );
+    winAnimation.setPosition(this._centerPos.x-75, this._centerPos.y+150);
+    this.addChild(winAnimation);
   }
 });
 
