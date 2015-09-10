@@ -19,7 +19,7 @@ var MinionsLayer = cc.Layer.extend({
       Round = this.round;
       this.sumUp();
     } else {
-      cc.director.runScene(new EndScene());
+      cc.director.runScene(new EndScene(123.4));
     }
     this.onShowReport();
   },
@@ -39,6 +39,12 @@ var MinionsLayer = cc.Layer.extend({
         );
     report.setScale(2);
     this.addChild(report,90);
+  },
+
+  onShowGuide:function(){
+    var guide = new GuideLayer();
+    guide.setScale(2);
+    this.addChild(guide, 89);
   },
 
   initInventroy : function() {
@@ -74,6 +80,16 @@ var MinionsLayer = cc.Layer.extend({
     reportMenu.y = -210;
     reportMenu.setScale(1, 0.8)
     this.addChild(reportMenu);
+
+    var guideMenu = new cc.Menu(
+        new cc.MenuItemImage(
+            res.BTRPTNormal,
+            res.BTRPTSelected,
+            this.onShowGuide, this)
+        );
+    guideMenu.x = 750;
+    guideMenu.y = -150;
+    this.addChild(guideMenu);
   },
 
 	initRound : function(round_id) {

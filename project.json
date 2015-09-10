@@ -21,6 +21,7 @@
         "src/MinionScene.js",
         "src/AdvertiserLayer.js",
         "src/EndScene.js",
-        "src/ReportLayer.js"
+        "src/ReportLayer.js",
+        "src/GuideLayer.js"
     ]
 }
