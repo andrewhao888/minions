@@ -1,21 +1,38 @@
 
 var MinionsLayer = cc.Layer.extend({
+  round:0,
 	ctor : function() {
 		this._super();
 		this.init();
 	},
 
 	init : function() {
-		this._super(); 
-
-		for (var r = 1; r <= 5; r++) {
-			this.initRound(r);
-		}
-
+		this._super();
+    this.initInventroy();
 	},
 
-	initRound : function(round_id) {
-		var inventorys = [];
+  onPlay : function() {
+    if (this.round < 5) {
+      this.round += 1;
+    cc.log(this.round);
+      this.initRound(this.round);
+    } else {
+      cc.director.runScene(new EndScene());
+    }
+  },
+
+  initInventroy : function() {
+    var letUsGo = new cc.MenuItemImage(
+      res.BTGoNormal,
+      res.BTGoSelected,
+      this.onPlay, this);
+    var goMenu = new cc.Menu(letUsGo)
+      goMenu.x = 640;
+      goMenu.y = 260;
+    goMenu.setScale(2, 2);
+    this.addChild(goMenu);
+
+    var inventorys = [];
     for(var i = 0; i < 6; i++) {
       var param = InventoryParam[i]
       inventorys[i] = new MinionBox(
@@ -27,6 +44,9 @@ var MinionsLayer = cc.Layer.extend({
       inventorys[i].setScale(2, 2);
       this.addChild(inventorys[i]);
     };
+  },
+
+	initRound : function(round_id) {
 
 		var advertisers = [];
 		for(var a = 0; a < 3; a++) {
@@ -60,7 +80,7 @@ var MinionsLayer = cc.Layer.extend({
 
 
 var MinionScene = cc.Scene.extend({
-	onEnter:function () {
+	onEnter : function() {
 		this._super();
     this.addChild(new BackgroundLayer());
     var minionLayer = new MinionsLayer()

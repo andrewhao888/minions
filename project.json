@@ -17,6 +17,7 @@
         "src/MinionBox.js",
         "src/Advertiser.js",
         "src/BackgroundLayer.js",
-        "src/MinionScene.js"
+        "src/MinionScene.js",
+        "src/EndScene.js"
     ]
 }

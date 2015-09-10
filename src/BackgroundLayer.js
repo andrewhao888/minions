@@ -15,7 +15,7 @@ var BackgroundLayer = cc.Layer.extend({
     var spriteBG = new cc.Sprite(res.FWBackground);
     spriteBG.setPosition(centerPos);
     this.addChild(spriteBG);
-  
+
   }
 
 });
