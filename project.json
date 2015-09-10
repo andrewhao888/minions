@@ -16,6 +16,7 @@
         "src/MinionBox.js",
         "src/MinionScene.js",
         "src/BackgroundLayer.js",
-        "src/BoxLayer.js"
+        "src/BoxLayer.js",
+        "src/ReportLayer.js"
     ]
 }

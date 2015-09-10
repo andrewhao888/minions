@@ -59,16 +59,38 @@ var HelloWorldLayer = cc.Layer.extend({
         );
 
         test = new MinionBox(
-            cc.p(200,200),
+            cc.p(500,600),
             res.Inventory1,
             1234,'3-body'
             );
         test.setScale(1,1);
-        this.addChild(test);
+        this.addChild(test,2);
+
+
+        var reportMenu = new cc.Menu(
+            new cc.MenuItemImage(
+                res.IconBanana,
+                res.IconBanana,
+                this.onShowReport, this)
+            );
+        reportMenu.x = 350;
+        reportMenu.y = 350;
+        this.addChild(reportMenu,3);
     },
 
     onPlay:function(){
       cc.director.runScene(new MinionScene());
+    },
+
+    onShowReport:function(){
+        rep = new ReportLayer(
+            0,
+            ['Bro','Ave','Slv','HoC','Flash','3-Body'],
+            [1,2,3,4,5,6],
+            [2,3,4,5,5,6],
+            ['w1','w3','w3','w2','w1','w3']
+            );
+        this.addChild(rep,90);
     }
 
 });
