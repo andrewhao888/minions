@@ -18,6 +18,7 @@
         "src/Advertiser.js",
         "src/BackgroundLayer.js",
         "src/ReportLayer.js",
+        "src/GuideLayer.js",
         "src/Advertiser.js",
         "src/MinionScene.js",
         "src/EndScene.js"

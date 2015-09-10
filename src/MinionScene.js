@@ -35,6 +35,12 @@ var MinionsLayer = cc.Layer.extend({
     this.addChild(report,90);
   },
 
+  onShowGuide:function(){
+    var guide = new GuideLayer();
+    guide.setScale(2);
+    this.addChild(guide, 89);
+  },
+
   initInventroy : function() {
     var letUsGo = new cc.MenuItemImage(
       res.BTGoNormal,
@@ -69,6 +75,15 @@ var MinionsLayer = cc.Layer.extend({
     reportMenu.y = -150;
     this.addChild(reportMenu);
 
+    var guideMenu = new cc.Menu(
+        new cc.MenuItemImage(
+            res.BTRPTNormal,
+            res.BTRPTSelected,
+            this.onShowGuide, this)
+        );
+    guideMenu.x = 750;
+    guideMenu.y = -150;
+    this.addChild(guideMenu);
   },
 
 	initRound : function(round_id) {
