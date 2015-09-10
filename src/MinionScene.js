@@ -70,10 +70,10 @@ var MinionsLayer = cc.Layer.extend({
         res.BTRPTSelected,
         this.onShowReport, this)
       );
-    reportMenu.x = -100;
-    reportMenu.y = -150;
+    reportMenu.x = 0;
+    reportMenu.y = -210;
+    reportMenu.setScale(1, 0.8)
     this.addChild(reportMenu);
-
   },
 
 	initRound : function(round_id) {

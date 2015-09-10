@@ -51,7 +51,7 @@ var StartLayer = cc.Layer.extend({
     queuePlist = new cc.SpriteBatchNode(res.Queue_png);
     queuePlist.setScale(2, 2);
     queuePlist.x = -800;
-    queuePlist.y = -1000;
+    queuePlist.y = -1035;
     this.addChild(queuePlist,2);
 
     var animFrames = [];
