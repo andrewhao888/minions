@@ -4,11 +4,14 @@ var res = {
     CloseSelected_png : "res/CloseSelected.png",
     start_n_png       : "res/start_n.png",
     start_s_png       : "res/start_s.png",
-
-    BlankBackground : "res/bg_blank.png",
+    
+    StartBackground : "res/bg_fw_start.png",
     FWBackground : "res/bg_fw.png",
-    RPTBackground : "res/bg_report.png",
-
+    RPTBackgroung : "res/bg_report.png",
+    
+    LogoFW : "res/logo_fw.png",
+    LogoMinions : "res/logo_minions.png",
+    
     BTPlayNormal : "res/button/bt_play_normal.png",
     BTPlaySelected : "res/button/bt_play_selected.png",
     BTGoNormal : "res/button/bt_go_normal.png",
@@ -47,8 +50,8 @@ var res = {
 
     Hello_plist : "res/plist/dave_hello.plist",
     Hello_png : "res/plist/dave_hello.png",
-    Queue_plist : "res/plist/queue.plist",
-    Queue_png : "res/plist/queue.png"
+    Queue_plist : "res/plist/queue_s.plist",
+    Queue_png : "res/plist/queue_s.png"
 };
 
 
