@@ -65,11 +65,11 @@ var MinionsLayer = cc.Layer.extend({
     };
 
     var reportMenu = new cc.Menu(
-        new cc.MenuItemImage(
-            res.BTRPTNormal,
-            res.BTRPTSelected,
-            this.onShowReport, this)
-        );
+      new cc.MenuItemImage(
+        res.BTRPTNormal,
+        res.BTRPTSelected,
+        this.onShowReport, this)
+      );
     reportMenu.x = -100;
     reportMenu.y = -150;
     this.addChild(reportMenu);

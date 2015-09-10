@@ -9,7 +9,7 @@ function Advertiser(param) {
     var original_bid = this.bid;
     if (round_id == 1) {
       this.bid = Costs[inventory_id] * this.diff + this.fluctuate(inventory_id);
-    } else if (Adver[inventory_id] === this.id - 1) {
+    } else if (Adver[inventory_id - 1] === this.id) {
       this.bid = Bid[inventory_id] * (1 - this.decay()) + this.fluctuate(inventory_id);
     } else {
       this.bid = Bid[inventory_id] * (1 + this.enhance())  + this.fluctuate(inventory_id);
@@ -18,6 +18,7 @@ function Advertiser(param) {
     if (this.bid >= this.bLeft) {
       this.bid = this.bLeft;
     }
+cc.log("id: " + this.id + " bid: " + this.bid + " bLeft: " + this.bLeft + " enhance: " + this.enhance() + " decay: " + this.decay() + " fluctuate: " + this.fluctuate(inventory_id) );
     return this.bid;
   };
 
@@ -33,11 +34,11 @@ function Advertiser(param) {
   this.enhance = function(){
     switch(this.id)
     { case 1:
-        return this.bLeft / this.budget * 0.5; break;
+        return this.bLeft / this.budget * 0.3; break;
       case 2:
-        return 1 - this.bLeft / this.budget * 0.2; break;
+        return 1 - this.bLeft / this.budget * 0.6; break;
       case 3:
-        return 0.2; break;
+        return 0.1; break;
     }
   }
 
@@ -48,7 +49,7 @@ function Advertiser(param) {
       case 2:
         return this.bLeft / this.budget; break;
       case 3:
-        return 0.2; break;
+        return 0.1; break;
     }
   };
 
