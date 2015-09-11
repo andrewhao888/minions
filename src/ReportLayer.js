@@ -141,12 +141,12 @@ var ReportLayer = cc.Layer.extend({
   renderClose:function(){
     var menu = new cc.Menu(
       new cc.MenuItemImage(
-        res.BTBackNormal,
-        res.BTBackSelected,
+        res.BTCloseNormal,
+        res.BTCloseSelected,
         this.onClose, this
       ));
-    menu.x = this._centerPos.x;
-    menu.y = this._centerPos.y-400;
+    menu.x = this._centerPos.x + 280;
+    menu.y = this._centerPos.y + 230;
     this.addChild(menu, 1);
   },
 
