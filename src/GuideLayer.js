@@ -77,21 +77,21 @@ var GuideLayer = cc.Layer.extend({
       var label = new cc.LabelTTF(
         texts[i], 'Arial', 25);
       label.setFontFillColor(new cc.Color(146,215,166));
-      label.setPosition(this._centerPos.x,this._centerPos.y + 150 - i*40);
+      label.setPosition(this._centerPos.x,this._centerPos.y + 100 - i*40);
       label.setHorizontalAlignment(30);
       this.addChild(label);
     }
   },
 
   renderClose:function(){
-    var menu = new cc.Menu(
-      new cc.MenuItemImage(
-        res.BTBackNormal,
-        res.BTBackSelected,
-        this.onClose, this
-      ));
-    menu.x = this._centerPos.x;
-    menu.y = this._centerPos.y-400;
+	var menu = new cc.Menu(
+	  new cc.MenuItemImage(
+		res.BTCloseNormal,
+		res.BTCloseSelected,
+		this.onClose, this
+	));
+    menu.x = this._centerPos.x + 280;
+    menu.y = this._centerPos.y + 230;
     this.addChild(menu, 1);
   },
 

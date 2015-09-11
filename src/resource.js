@@ -15,9 +15,12 @@ var res = {
     BTBackSelected    : "res/button/bt_back_selected.png",
     BTRPTNormal       : "res/button/bt_rpt_normal.png",
     BTRPTSelected     : "res/button/bt_rpt_selected.png",
-
+    BTCloseNormal	  : "res/button/bt_close_normal.png",
+    BTCloseSelected   : "res/button/bt_close_selected.png",
     BTReplayNormal    : "res/button/bt_replay_normal.png",
     BTReplaySelected  : "res/button/bt_replay_selected.png",
+    BTGuideNormal	  : "res/button/bt_guide_normal.png",
+    BTGuideSelected   : "res/button/bt_guide_selected.png",
 
     EditBoxBg         : "res/edit_box_bg.png",
     EditBoxFront      : "res/edit_box_front.png",

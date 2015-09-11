@@ -83,16 +83,20 @@ var MinionsLayer = cc.Layer.extend({
         res.BTRPTSelected,
         this.onShowReport, this)
       );
-    reportMenu.setPosition(this._centerPos.x-350, this._centerPos.y-680);
+
+    reportMenu.x = 50;
+    reportMenu.y = -40;
+    reportMenu.setScale(1, 1)
     this.addChild(reportMenu);
 
     var guideMenu = new cc.Menu(
         new cc.MenuItemImage(
-            res.BTRPTNormal,
-            res.BTRPTSelected,
+        	res.BTGuideNormal,
+        	res.BTGuideSelected,
             this.onShowGuide, this)
         );
-    guideMenu.setPosition(this._centerPos.x+350, this._centerPos.y-680);
+    guideMenu.setPosition(this._centerPos.x+450, this._centerPos.y-610);
+    guideMenu.setScale(1, 1);
     this.addChild(guideMenu);
   },
 
