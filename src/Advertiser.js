@@ -24,7 +24,7 @@ cc.log("id: " + this.id + " bid: " + this.bid + " bLeft: " + this.bLeft + " enha
 
   this.getBLeft = function(inventory_id) {
     if (Adver[inventory_id - 1] === this.id) {
-      this.bLeft = this.bLeft - Bid_history[inventory_id][this.id - 1];
+      this.bLeft = this.bLeft - Asks[inventory_id - 1];
     } else {
       this.bLeft = this.bLeft;
     }
