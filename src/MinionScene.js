@@ -12,15 +12,11 @@ var MinionsLayer = cc.Layer.extend({
 	},
 
   onPlay : function() {
-    if (this.round < 5) {
-      this.round += 1;
-      this.getAsk(this.inventorys);
-      this.initRound(this.round);
-      Round = this.round;
-      this.sumUp();
-    } else {
-      cc.director.runScene(new EndScene(123.4));
-    }
+    this.round += 1;
+    this.getAsk(this.inventorys);
+    this.initRound(this.round);
+    Round = this.round;
+    this.sumUp();
     this.onShowReport();
   },
 

@@ -19,8 +19,14 @@ var AdvertiserLayer = cc.Layer.extend({
     this.addChild(minion1);
 
     var animFrames1 = [];
-    for (var i = 0; i < 8; i++) { 
-      var str = "stuart_bmw_" + i + ".png";
+    var plus = Math.round(Math.random() * 200);
+    for (var i = 0; i < 8 + plus; i++) { 
+      var str = "stuart_bmw_0.png";
+      if( i >= 8 ) {
+        str = "stuart_bmw_0.png";
+      } else {
+        str = "stuart_bmw_" + i + ".png";
+      }
       var frame = cc.spriteFrameCache.getSpriteFrame(str);
       animFrames1.push(frame);
     }
@@ -38,8 +44,14 @@ var AdvertiserLayer = cc.Layer.extend({
     this.addChild(minion2);
 
     var animFrames2 = [];
-    for (var i = 0; i < 9; i++) { 
-      var str = "tim_burger_" + i + ".png";
+    var plus = Math.round(Math.random() * 200)
+    for (var i = 0; i < 9 + plus; i++) { 
+      var str = "tim_burger_0.png";
+      if( i >= 9 ) {
+        str = "tim_burger_0.png";
+      } else {
+        str = "tim_burger_" + i + ".png";
+      }
       var frame = cc.spriteFrameCache.getSpriteFrame(str);
       animFrames2.push(frame);
     }
@@ -58,8 +70,14 @@ var AdvertiserLayer = cc.Layer.extend({
     this.addChild(minion3);
 
     var animFrames3 = [];
-    for (var i = 0; i < 5; i++) { 
-      var str = "jorge_cola_" + i + ".png";
+    var plus = Math.round(Math.random() * 200);
+    for (var i = 0; i < 5 + plus; i++) { 
+      var str = "jorge_cola_0.png";
+      if( i >= 5 ) {
+        str = "jorge_cola_0.png";
+      } else {
+        str = "jorge_cola_" + i + ".png";
+      }
       var frame = cc.spriteFrameCache.getSpriteFrame(str);
       animFrames3.push(frame);
     }

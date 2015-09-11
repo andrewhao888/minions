@@ -152,6 +152,9 @@ var ReportLayer = cc.Layer.extend({
 
   onClose:function(){
     this.removeFromParentAndCleanup();
+    if(Round == 5) {
+      cc.director.runScene(new EndScene());
+    }
   }
 
 });
