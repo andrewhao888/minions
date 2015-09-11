@@ -121,6 +121,7 @@ var MinionsLayer = cc.Layer.extend({
 
 		for (var i = 0; i < 3; i++) {
 			var bid = advertisers[i].getBid(inv_id, round_id);
+            Bid_history[inv_id][i] = bid;
 			if (bid >= ask && bid > bestBid) {
 				winner = i + 1;
 				bestBid = bid;

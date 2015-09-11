@@ -148,6 +148,13 @@ var EndScene = cc.Scene.extend({
   onEnter:function () {
     this._super();
     this.addChild(new BackgroundLayer());
+    Score = 0;
+    Round = 1;
+    Costs = [ 40, 30, 5, 70, 5, 50 ];
+    Asks  = [ 0, 0, 0, 0, 0, 0 ];
+    Adver = [ 0, 0, 0, 0, 0, 0 ];
+    Bid   = [ 0, 0, 0, 0, 0, 0 ];
+    Bid_history = [[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]];
     this.addChild(new EndLayer());
   }
 });
