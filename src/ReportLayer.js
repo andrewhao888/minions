@@ -100,7 +100,7 @@ var ReportLayer = cc.Layer.extend({
       this.addChild(sold);
 
       var winner = new cc.LabelTTF(
-        wins[i], this._fontType, this._fontSize);
+        Winner[wins[i]], this._fontType, this._fontSize);
       winner.setFontFillColor(new cc.Color(255,255,0));
       winner.setPosition(this._horizonPos[4],this._vertical[i+2]);
       this.addChild(winner);

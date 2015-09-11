@@ -7,6 +7,8 @@ Bid   = [ 0, 0, 0, 0, 0, 0 ];
 
 Bid_history = [[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]];
 
+Winner = [ "", "BMW", "Burger King", "CocaCola"];
+
 AdvertiserParam = [
 { 
   id     : 1,

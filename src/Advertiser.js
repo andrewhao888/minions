@@ -10,9 +10,9 @@ function Advertiser(param) {
     if (round_id == 1) {
       this.bid = Costs[inventory_id] * this.diff + this.fluctuate(inventory_id);
     } else if (Adver[inventory_id - 1] === this.id) {
-      this.bid = Bid_history[inventory_id][this.id -1 ] * (1 - this.decay()) + this.fluctuate(inventory_id);
+      this.bid = Bid_history[inventory_id][this.id - 1] * (1 - this.decay()) + this.fluctuate(inventory_id);
     } else {
-      this.bid = Bid_history[inventory_id][this.id -1 ] * (1 + this.enhance())  + this.fluctuate(inventory_id);
+      this.bid = Bid_history[inventory_id][this.id - 1] * (1 + this.enhance())  + this.fluctuate(inventory_id);
     }
     this.bLeft = this.getBLeft(inventory_id);
     if (this.bid >= this.bLeft) {
@@ -23,8 +23,8 @@ cc.log("id: " + this.id + " bid: " + this.bid + " bLeft: " + this.bLeft + " enha
   };
 
   this.getBLeft = function(inventory_id) {
-    if (Adver[inventory_id-1] === this.id) {
-      this.bLeft = this.bLeft - Asks[inventory_id];
+    if (Adver[inventory_id - 1] === this.id) {
+      this.bLeft = this.bLeft - Bid_history[inventory_id][this.id - 1];
     } else {
       this.bLeft = this.bLeft;
     }
@@ -36,7 +36,7 @@ cc.log("id: " + this.id + " bid: " + this.bid + " bLeft: " + this.bLeft + " enha
     { case 1:
         return this.bLeft / this.budget * 0.3; break;
       case 2:
-        return 1 - this.bLeft / this.budget * 0.6; break;
+        return this.bLeft / this.budget * 0.15; break;
       case 3:
         return 0.1; break;
     }
@@ -47,7 +47,7 @@ cc.log("id: " + this.id + " bid: " + this.bid + " bLeft: " + this.bLeft + " enha
     { case 1:
         return 1 - this.bLeft / this.budget; break;
       case 2:
-        return this.bLeft / this.budget; break;
+        return 1 - this.bLeft / this.budget; break;
       case 3:
         return 0.1; break;
     }

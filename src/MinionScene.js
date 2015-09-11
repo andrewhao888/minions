@@ -4,6 +4,7 @@ var MinionsLayer = cc.Layer.extend({
   _centerPos:null,
 	ctor : function() {
 		this._super();
+    this.initData();
 		this.init();
 	},
 
@@ -17,6 +18,16 @@ var MinionsLayer = cc.Layer.extend({
 
     this.initInventroy();
 	},
+
+  initData : function() {
+    Score = 0;
+    Round = 1;
+    Costs = [ 40, 30, 5, 70, 5, 50 ];
+    Asks  = [ 0, 0, 0, 0, 0, 0 ];
+    Adver = [ 0, 0, 0, 0, 0, 0 ];
+    Bid   = [ 0, 0, 0, 0, 0, 0 ];
+    Bid_history = [[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0],[0,0,0]];
+  },
 
   onPlay : function() {
     this.round += 1;
