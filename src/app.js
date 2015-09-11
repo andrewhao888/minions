@@ -40,6 +40,7 @@ var StartLayer = cc.Layer.extend({
     	anchorX: 0.5,
     	anchorY: 0.5
     });
+    playButton.setScale(1.2, 1.2);
     		
     var menu = new cc.Menu(playButton);
     menu.x = 0;
